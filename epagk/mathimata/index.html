@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="el">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
     <title>E•Pagkrition</title>
 
     <!-- Bootstrap core CSS -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Custom css -->
     <link rel="stylesheet" type="text/css" href="css.css">
@@ -32,40 +33,40 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class="site-wrapper">
 
 
 
-      <div class="site-wrapper-inner">
+        <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+            <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <a href="../mainpage/index.html"><h3 class="masthead-brand">e•Pagkrition</h3></a>
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <a href="../mainpage/index.html"><h3 class="masthead-brand">e•Pagkrition</h3></a>
 
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a href="../../">Εισαγωγή στο Forum</a></li>
-                  <li class="active"><a href="index.html">Μαθήματα και Σημειώσεις</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="../../">Εισαγωγή στο Forum</a></li>
+                                <li class="active"><a href="index.html">Μαθήματα και Σημειώσεις</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading"></h1>
-            <p class="lead">Εδώ μπορείς να βρείς τα Μαθήματα και τις Σημειώσεις οποιασδήποτε ημέρας, απλά διάλεξε το μάθημα που θες και το μήνα που παραδόθηκε</p>
+                <div class="inner cover">
+                    <h1 class="cover-heading"></h1>
+                    <p class="lead">Εδώ μπορείς να βρείς τα Μαθήματα και τις Σημειώσεις οποιασδήποτε ημέρας, απλά διάλεξε το μάθημα που θες και το μήνα που παραδόθηκε</p>
 
 
-              <form action="search.php" method="post">
-                <div class="form-group">
-                <label for="mathima">Διάλεξε μάθημα:</label>
-                <select class="form-control" id="mathima" name="mathima">
+                    <form action="resultspage.php" method="post">
+                        <div class="form-group">
+                            <label for="mathima">Διάλεξε μάθημα:</label>
+                            <select class="form-control" id="mathima" name="mathima" required>
                   <option value=""></option>
                   <option value="alg">άλγεβρα</option>
                   <option value="geo">γεωμετρία</option>
@@ -79,11 +80,11 @@
                   <option value="pol">πολιτική παιδεία</option>
                   <option value="eng">αγγλικά</option>
                 </select>
-              </div>
+                        </div>
 
-                <div class="form-group">
-                  <label for="minas">Διάλεξε μήνα παράδοσης:</label>
-                  <select class="form-control" id="minas" name="minas">
+                        <div class="form-group">
+                            <label for="minas">Διάλεξε μήνα παράδοσης:</label>
+                            <select class="form-control" id="minas" name="minas" required>
                     <option value=""></option>
                     <option value="sep">Σέπτεμβριος</option>
                     <option value="oct">Οκτώβριος</option>
@@ -95,40 +96,33 @@
                     <option value="apr">Απρίλιος</option>
                     <option value="may">Μάιος</option>
                   </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" name="Submit">Ψάξε</button>
+                    </form>
+
+                    <p>ή ανέβασε εσύ κάποιο μάθημα<strong><a class="submission" href="submission.html" target="_self"> εδώ </a></strong></p>
+
+
+                    </form>
+
+                    </p>
                 </div>
 
-                <button type="submit" class="btn btn-primary" name="Submit">Ψάξε</button>
-              </form>
 
-               <p>ή ανέβασε εσύ κάποιο μάθημα<strong><a class="submission" href="submission.html" target="_self"> εδώ </a></strong></p>
-
-
-            </form>
-
-            </p>
-          </div>
-
-
-          </div>
+            </div>
 
         </div>
 
-      </div>
-
     </div>
 
-
-
-    <div id="results">
-      <h1>Αποτελέσματα</h1>
-
     </div>
-
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-  </body>
+</body>
+
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="el">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,18 +9,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="sub.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="page-header">
-      <h1> <small>Φόρμα υποβολής μαθήματος</small></h1>
-      <p> Συμπλήρωσε οτίδηποτε πιστεύεις οτι χρεάζεται και μην παραλείψεις κάτι σημαντικό </p>
+</head>
 
-      <form action="insert.php" method="post">
-        <div class="form-group">
-        <label for="mathima">Διάλεξε μάθημα:</label>
-        <select class="form-control" id="mathima" name="mathima">
-          <option value=" "></option>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1> <small>Φόρμα υποβολής μαθήματος</small></h1>
+            <p> Συμπλήρωσε οτίδηποτε πιστεύεις οτι χρεάζεται και μην παραλείψεις κάτι σημαντικό </p>
+
+            <form action="subresults.php" method="post">
+                <div class="form-group">
+                    <label for="mathima">Διάλεξε μάθημα:</label>
+                    <select class="form-control" id="mathima" name="mathima">
+          <option value=""></option>
           <option value="alg">άλγεβρα</option>
           <option value="geo">γεωμετρία</option>
           <option value="phy">φυσική</option>
@@ -32,12 +34,12 @@
           <option value="pol">πολιτική παιδεία</option>
           <option value="eng">αγγλικά</option>
         </select>
-      </div>
+                </div>
 
-        <div class="form-group">
-          <label for="minas">Διάλεξε μήνα παράδοσης:</label>
-          <select class="form-control" id="minas" name="minas">
-            <option value=" "></option>
+                <div class="form-group">
+                    <label for="minas">Διάλεξε μήνα παράδοσης:</label>
+                    <select class="form-control" id="minas" name="minas" required>
+            <option value=""></option>
             <option value="sep">Σέπτεμβριος</option>
             <option value="oct">Οκτώβριος</option>
             <option value="nov">Νοέμβριος</option>
@@ -48,12 +50,12 @@
             <option value="apr">Απρίλιος</option>
             <option value="may">Μάιος</option>
           </select>
-        </div>
+                </div>
 
 
-        <div class="form-group">
-       <label for="perigrafi">Περίγραψε εκείνο το μάθημα...</label>
-       <textarea class="form-control" id="perigrafi" name="perigrafi" rows="15" placeholder="
+                <div class="form-group">
+                    <label for="perigrafi">Περίγραψε εκείνο το μάθημα...</label>
+                    <textarea class="form-control" id="perigrafi" name="perigrafi" rows="15" required placeholder="
 
 Ξεκινήσατε κάποιο καινούργιο κεφάλαιο, αν ναι, ποιό;
 
@@ -66,22 +68,23 @@
 Τέλος, τι ανατέθηκε ως διάβασμα για το σπίτι;
 
 Συμπλήρωσε ότι άλλο θεωρείς σημαντικό..."></textarea>
-      </div>
+                </div>
 
-      <button type="submit" class="btn btn-primary">Υπόβαλλε</button>
+                <button type="submit" class="btn btn-primary">Υπόβαλλε</button>
 
-    </form>
-
-
+            </form>
 
 
 
 
 
 
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  </body>
+
+
+            <!-- jQuery first, then Tether, then Bootstrap JS. -->
+            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
 </html>
